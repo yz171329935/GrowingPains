@@ -12,6 +12,7 @@
         <module>DeepLearningJVM</module>
         <module>Groovy</module>
         <module>spring</module>
+        <module>DesignPattern</module>
     </modules>
 
 
