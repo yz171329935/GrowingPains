@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<customers>
+    <corporate>
+        <customer name="Bill Gates" company="Microsoft"/>
+        <customer name="Tim Cook" company="Apple"/>
+    </corporate>
+
+    <consumer>
+        <customer name="John" />
+        <customer name="John" />
+
+    </consumer>
+</customers>
