@@ -1,4 +1,4 @@
-package com.marco.groovy.GroovyInAction_PDF
+package com.marco.groovy.GroovyInAction_PDF.P1
 
 /**
  * Created by marco on 16/10/2.
