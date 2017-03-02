@@ -13,6 +13,7 @@
         <module>Groovy</module>
         <module>spring</module>
         <module>DesignPattern</module>
+        <module>zookeeper</module>
     </modules>
 
 
