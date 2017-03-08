@@ -1,5 +1,7 @@
 package proxy;
 
+import java.lang.reflect.Proxy;
+
 /**
  * Created by marco on 15/12/23.
  * 定义一个西门庆,这人色中饿鬼
@@ -11,17 +13,25 @@ public class XiMenQing {
 * 如果没有王婆在中间牵线,这两个不要脸的能成吗?难说的很!
 */
     public static void main(String[] args) {
-        //把王婆叫出来
-        WangPo wangPo = new WangPo();
-        //然后西门庆就说,我要和潘金莲happy,然后王婆就安排了西门庆丢筷子的那出戏:
-        wangPo.makeEyesWithMan(); //看到没,虽然表面上时王婆在做,实际上爽的是潘金莲
-        wangPo.happyWithMan();
+        //静态代理：
+//        //把王婆叫出来
+//        WangPo wangPo = new WangPo();
+//        //然后西门庆就说,我要和潘金莲happy,然后王婆就安排了西门庆丢筷子的那出戏:
+//        wangPo.makeEyesWithMan(); //看到没,虽然表面上时王婆在做,实际上爽的是潘金莲
+//        wangPo.happyWithMan();
+//
+//
+//        //改编一下历史,贾氏被西门庆勾走:
+//        JiaShi jiaShi = new JiaShi();
+//        WangPo wangPo1 = new WangPo(jiaShi); //让王婆作为贾氏的代理人
+//        wangPo1.makeEyesWithMan();
+//        wangPo1.happyWithMan();
 
-
-        //改编一下历史,贾氏被西门庆勾走:
-        JiaShi jiaShi = new JiaShi();
-        WangPo wangPo1 = new WangPo(jiaShi); //让王婆作为贾氏的代理人
-        wangPo1.makeEyesWithMan();
-        wangPo1.happyWithMan();
+        //动态代理：
+        KindWomen panjinlian = new PanJinLian();
+        WangPoHandler wangPoHandler = new WangPoHandler(panjinlian);
+        KindWomen proxy = (KindWomen)Proxy.newProxyInstance(panjinlian.getClass().getClassLoader(), panjinlian.getClass().getInterfaces(), wangPoHandler);
+        proxy.makeEyesWithMan();
+        proxy.happyWithMan();
     }
 }
