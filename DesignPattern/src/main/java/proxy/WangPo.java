@@ -17,12 +17,12 @@ public class WangPo implements KindWomen {
         this.kindWomen = kindWomen;
     }
 
-    @Override
+
     public void makeEyesWithMan() {
         this.kindWomen.makeEyesWithMan(); //王婆这么大年龄了,谁看她抛媚眼?!
     }
 
-    @Override
+
     public void happyWithMan() {
         kindWomen.happyWithMan(); //自己老了,干不了,可以让年轻的代替
     }
