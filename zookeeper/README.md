@@ -169,7 +169,28 @@ ZK是典型的分布式数据一致性的解决方案，分布式应用程序可
  
         New ZooKeeper时注册的watcher叫default watcher，只对client的连接状态变化作出反应。   
 
-#### ZKClient && Curator
+### ZKClient && Curator
+    
+
+### 典型应用场景
+
+#### 数据发布/订阅
+
+#### 负载均衡
+
+#### 命名服务
+
+#### 分布式协调/通知
+
+#### 集群管理
+
+#### Master选举
+
+#### 分布式锁
+
+#### 分布式队列
+
+
     
      
   
