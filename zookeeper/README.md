@@ -118,9 +118,14 @@ ZK是典型的分布式数据一致性的解决方案，分布式应用程序可
 ###  Watch机制
     
 
- 
+        ZooKeeper 允许客户端向服务端注册一个 Watcher 监听，当服务端的一些指定事件触发了这个 Watcher，那么就会向指定客户端发送一个事件通知来实现分布式的通知功能。
+        ZooKeeper 的 Watcher 机制主要包括客户端线程、客户端 WatchManager 和 ZooKeeper 服务器三部分。
+        在具体工作流程上，简单地讲，客户端在向 ZooKeeper 服务器注册 Watcher 的同时，会将 Watcher 对象存储在客户端的 WatchManager 中。
+        当 ZooKeeper 服务器端触发 Watcher 事件后，会向客户端发送通知，客户端线程从 WatchManager 中取出对应的 Watcher 对象来执行回调逻辑
+        
         一个zk的节点可以被监控，包括这个目录中存储的数据的修改，子节点目录的变化，一旦变化可以通知设置监控的客户端，
-        这个功能是zookeeper对于应用最重要的特性，通过这个特性可以实现的功能包括配置的集中管理，集群管理等等。
+        
+   ![注册和通知流程图](https://www.ibm.com/developerworks/cn/opensource/os-cn-apache-zookeeper-watcher/img001.png "注册和通知流程图")
  
  
 #### zookeeper机制的特点 
@@ -166,5 +171,5 @@ ZK是典型的分布式数据一致性的解决方案，分布式应用程序可
 
 #### ZKClient && Curator
     
-    
+     
   
