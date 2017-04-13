@@ -15,7 +15,6 @@ public class Recipes_NoLock {
 
         for (int i = 0; i < 10; i++) {
             new Thread(new Runnable() {
-                @Override
                 public void run() {
                     try {
                         down.await();

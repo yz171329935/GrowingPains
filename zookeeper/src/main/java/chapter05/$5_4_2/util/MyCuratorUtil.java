@@ -10,7 +10,7 @@ import org.apache.curator.retry.ExponentialBackoffRetry;
 public class MyCuratorUtil {
 
     private static CuratorFramework client = CuratorFrameworkFactory.builder()
-            .connectString("192.168.224.54:2181")
+            .connectString("127.0.0.1:2181")
             .retryPolicy(new ExponentialBackoffRetry(1000, 3))
             .build();
 
