@@ -231,6 +231,9 @@ ZK是典型的分布式数据一致性的解决方案，分布式应用程序可
 
 #### 集群管理
 
+        监控系统在 /clusterServers 节点上注册一个Watcher，以后每动态加机器，那么就往 /clusterServers 下创建一个 EPHEMERAL类型的节点：/clusterServers/{hostname}. 
+        这样，监控系统就能够实时知道机器的增减情况，至于后续处理就是监控系统的业务了。
+
 #### Master选举
 
         Master选举则是zookeeper中最为经典的应用场景了。
