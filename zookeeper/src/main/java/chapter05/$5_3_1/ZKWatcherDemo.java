@@ -79,9 +79,10 @@ public class ZKWatcherDemo implements Watcher {
         };
 
         zooKeeper.exists(path2,watcher);
-        zooKeeper.getChildren(path2,watcher);
 
-        zooKeeper.create(path2,"".getBytes(), ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.PERSISTENT);
+        zooKeeper.create(path2,"".getBytes(), ZooDefs.Ids.OPEN_ACL_UNSAFE, CreateMode.EPHEMERAL);
+//
+        zooKeeper.getChildren(path2,watcher);
 
 
         Thread.sleep(Integer.MAX_VALUE);
