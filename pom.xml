@@ -14,7 +14,21 @@
         <module>spring</module>
         <module>DesignPattern</module>
         <module>zookeeper</module>
+        <module>Netty</module>
+        <module>OtherDemo</module>
     </modules>
 
 
+    <dependencies>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+            <version>3.5</version>
+        </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>22.0</version>
+        </dependency>
+    </dependencies>
 </project>
